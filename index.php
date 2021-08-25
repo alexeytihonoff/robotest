@@ -66,7 +66,9 @@ function checked($var, $value = null)
     }
 }
 
-echo "<b>Текущая страница</b> " . $page . "<br>";
+if (isset($page)) {
+    echo "<b>Текущая страница</b> " . $page . "<br>";
+}
 
 if ($page > 1) {
     ?><a href="<?php if($page <= 1){ echo '#'; } else { echo "?page=".($page - 1)."&option=".$show; } ?>">Предыдущая страница</a>&nbsp<?php
